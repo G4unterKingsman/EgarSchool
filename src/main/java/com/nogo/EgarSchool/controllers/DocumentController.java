@@ -36,6 +36,7 @@ public class DocumentController {
     }
 
 
+    //отобраение страницы добавления
     @GetMapping("/add")
     public String addDocument(Model model,
         @ModelAttribute("dtoDocument") DTODocument dtoDocument
@@ -56,6 +57,8 @@ public class DocumentController {
     }
 
 
+
+    //отобраение страницы редактора
     @GetMapping("/{id}/edit")
     public String editDocument(
             @PathVariable(value = "id") Long id,
@@ -84,7 +87,7 @@ public class DocumentController {
         return "redirect:/";
     }
 
-    @GetMapping("/finder") // поиск заданого параметра, все поля не обязательны
+    @GetMapping("/finder") // поиск в бд по заданному параметру, все поля не обязательны
     public String FindDocuments(
             @RequestParam (value = "title", required = false) String title,
             @RequestParam (value = "number", required = false) Long number,

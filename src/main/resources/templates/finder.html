@@ -19,13 +19,13 @@
         <tr><th>Название</th><br><th>Номер</th><br><th>Тип</th><br><th>Когда Создан</th><br><th>Содержимое</th><br></tr>
         </thead>
         <tbody th:if="${documents}">
-        <tr th:each="document : ${documents}">
-            <td th:text="${document.title}"></td>
-            <td th:text="${document.number}"></td>
-            <td th:text="${document.type}"></td>
-            <td th:text="${#temporals.format(document.whenCreated, 'dd.MM.yyyy HH:mm')}"></td>
-            <td th:text="${document.contentOfDoc}"></td>
-            <td><a th:href="'/index/' + ${document.id} + '/edit'">Редактировать</a></td>
+        <tr th:each="d : ${documents}">
+            <td th:text="${d.title}"></td>
+            <td th:text="${d.number}"></td>
+            <td th:text="${d.type}"></td>
+            <td th:text="${#temporals.format(d.whenCreated, 'dd.MM.yyyy HH:mm')}"></td>
+            <td th:text="${d.contentOfDoc}"></td>
+            <td><a th:href="'/index/' + ${d.id} + '/edit'">Редактировать</a></td>
         </tr>
         </tbody>
     </table>
