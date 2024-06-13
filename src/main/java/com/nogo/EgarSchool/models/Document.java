@@ -3,12 +3,12 @@ package com.nogo.EgarSchool.models;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
-
 import java.time.LocalDateTime;
 
+
+//сущность
 @Entity
 @Data
 @Table(name = "documents")

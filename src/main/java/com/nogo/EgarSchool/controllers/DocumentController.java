@@ -4,18 +4,14 @@ package com.nogo.EgarSchool.controllers;
 import com.nogo.EgarSchool.DTO.DTODocument;
 import com.nogo.EgarSchool.Mapper.MapperDocument;
 import com.nogo.EgarSchool.models.Document;
-import com.nogo.EgarSchool.repositories.DocumentRepository;
 import com.nogo.EgarSchool.services.DucumentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.Optional;
 
 
 @Controller
